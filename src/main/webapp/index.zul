@@ -1,0 +1,53 @@
+<zk>
+	<window hflex="1" vflex="1"
+		apply="com.github.simbo1905.dasmodel.DASModelComposer">
+		<hlayout hflex="1" vflex="1">
+			<spreadsheet id="ss" hflex="1" vflex="1"
+						 maxVisibleRows="25" maxVisibleColumns="10"
+				src="/WEB-INF/books/das_model.xlsx" />
+
+
+            <hbox>
+<!--
+            <vbox apply="org.zkoss.zkcharts.essentials.DisplayMultipleSeriesComposer" >
+                <charts id="chart" type="column" title="Market Share"
+                        subtitle="Click the columns to view regions" width="600"/>
+                <button id="back" label="back to All Market" visible="false"
+                        style="position: absolute; z-index:100; left:460px; top:40px"/>
+            </vbox>
+
+-->
+
+            </hbox>
+
+			<tabbox width="300px" vflex="1">
+				<tabs>
+					<tab label="Information" />
+					<tab label="Filters" />
+				</tabs>
+				<tabpanels>
+					<tabpanel>
+						<grid id="infoList" vflex="1">
+							<template name="model">
+								<row>
+									<cell>
+										<label
+											value="${each}">
+										</label>
+									</cell>
+								</row>
+							</template>
+						</grid>
+						<button label="Clear" id="clearInfo"/>
+					</tabpanel>
+
+					<tabpanel>
+						<listbox id="eventFilterList" vflex="1" checkmark="true"/>
+						<button label="Clear all" id="clearAllFilter"/>
+						<button label="Select all" id="selectAllFilter"/>
+					</tabpanel>
+				</tabpanels>
+			</tabbox>
+		</hlayout>
+	</window>
+</zk>
