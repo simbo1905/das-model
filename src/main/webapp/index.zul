@@ -2,13 +2,20 @@
 	<window hflex="1" vflex="1"
 		apply="com.github.simbo1905.dasmodel.DASModelComposer">
 		<hlayout hflex="1" vflex="1">
-			<spreadsheet id="ss" hflex="1" vflex="1"
-						 maxVisibleRows="25" maxVisibleColumns="10"
-				src="/WEB-INF/books/das_model.xlsx" />
+
+            <vlayout vflex="1" hflex="1">
+
+                Disclaimer: This model currently does nothing much and the chart isn't connected to anything. What next?
+                <spreadsheet id="ss" hflex="1" vflex="1"
+                             maxVisibleRows="25" maxVisibleColumns="10"
+                             src="/WEB-INF/books/das_model.xlsx" />
+
+
+            </vlayout>
 
 
             <hbox>
-<!--
+
             <vbox apply="org.zkoss.zkcharts.essentials.DisplayMultipleSeriesComposer" >
                 <charts id="chart" type="column" title="Market Share"
                         subtitle="Click the columns to view regions" width="600"/>
@@ -16,11 +23,10 @@
                         style="position: absolute; z-index:100; left:460px; top:40px"/>
             </vbox>
 
--->
 
             </hbox>
 
-			<tabbox width="300px" vflex="1">
+			<tabbox width="300px" vflex="1" visible="false">
 				<tabs>
 					<tab label="Information" />
 					<tab label="Filters" />
